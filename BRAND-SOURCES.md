@@ -35,3 +35,9 @@ The existing vanilla JavaScript renderer was retained. Component tokens are mapp
 - Geojit WhatsApp support: +91 99955 00044, listed on the contact page.
 
 Expert action offers contact routes; it does not claim an appointment or expert connection has been booked. FLIP does not receive or submit the basket. Share actions never send quantities or investment values. Native share success is reported only after the browser promise resolves.
+
+## Festival artwork revision — 20 October 2026
+
+Built-in image generation produced a two-frame realistic saffron gift-box scene. Source asset: assets/gift-diwali.webp (1774×887, 284,652 bytes, optimized WebP). Prompt: a matched closed/open Diwali gift box at an elevated three-quarter angle; saffron embossed gold-foil packaging, champagne satin ribbon, cream/gold nine-compartment interior, realistic lit diyas, marigolds and warm golden bokeh; consistent camera and lighting; no text or logos. The actual Geojit logo is overlaid separately in the exported card.
+
+The site uses a layered closed/open image transition, a brief golden glow and rising particles, with skip and reduced-motion support. Eight original SVG business pictograms replace letter-only stock tiles; these are sector illustrations, not company logos. A persistent completion action bar provides Like, Share, Download, Talk to an expert and Invest via FLIP.
