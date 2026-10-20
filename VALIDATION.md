@@ -15,3 +15,9 @@ Browser control was unavailable in this managed workspace. No browser preview se
 Before approval, check the standalone preview at 360/390/768/1440px, mobile landscape, keyboard only and reduced motion. Add all eight companies; increment quantities; remove/undo; switch themes and search; review by stock and sector; wrap/skip/reveal; edit after completion; refresh and recover draft. Export with names unchecked/checked, a long greeting and all eight names; try native sharing on a supported phone and fallback on desktop. Check browser console errors, focus restoration and any sticky control overlap.
 
 Figma system and official logo assets were unavailable; exact Geojit branding requires review. Market prices and research remain explicitly illustrative/pending. Live price integration, official disclosures and research, analytics consent wiring and service routing must be approved before launch.
+
+## Brand and CTA revision
+
+The earlier Figma/logo limitations are resolved: the real logo and exact colour/type tokens have now been obtained. Radio Canada Big is bundled locally. Header, footer, gift card, pill buttons and final actions have been revised. Missing temporary sample icons were discarded; there are no broken asset URLs in the build.
+
+The four final actions are explicit: Share my gift, Download gift card, Talk to a Geojit expert, Invest via FLIP. The expert dialog links to verified contact options. Export awaits the actual logo and font load. Device/browser QA remains pending because supported browser control is still unavailable.
