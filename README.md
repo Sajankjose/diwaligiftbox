@@ -12,7 +12,7 @@ npm run build
 npm start
 ```
 
-Visit http://localhost:8080. Alternatively, build and open `dist/wealth-box-preview.html` directly in a current browser. The standalone HTML has all styles and scripts embedded and no network dependency. Deploy the contents of `dist/` to static hosting **only after approval**. Nothing is deployed by these commands; there are no deployment workflows.
+Visit http://localhost:8080. Alternatively, build and open `dist/wealth-box-preview.html` directly in a current browser. The standalone HTML has all styles and scripts embedded and no network dependency. The build commands do not deploy. The user-authorized public deployment is at https://sajankjose.github.io/diwaligiftbox/. GitHub Pages publishes the `feature/diwali-wealth-box-prototype` branch.
 
 ## Experience
 
@@ -45,14 +45,14 @@ All eight prices, including Motherson ₹158.15, are retained **illustrative pro
 
 The Geojit design-system file was successfully inspected on 20 October 2026. The UI now uses Radio Canada Big (bundled 400/500/600/700), primary #09877B, pressed #036057, text #022F2D/#4A6361, light-yellow #FAFAED and card border #C9E2E0. Primary and secondary actions use the 56px/48px pill button geometry. See BRAND-SOURCES.md. Burgundy, gold and cream remain decorative campaign colours. The actual uploaded white Geojit logo is embedded without recolouring in the header, footer and gift-card export. The box and diyas are local CSS/canvas artwork.
 
-No suitability assessment, brokerage calculation, transaction submission, client lookup or consent-based lead capture is implemented. The final screen provides Share, Download, Talk to a Geojit expert and Invest via FLIP. Expert assistance offers official phone, branch locator and WhatsApp support; FLIP opens its verified login URL without transmitting an order. There is no backend.
+No suitability assessment, brokerage calculation, transaction submission, client lookup or consent-based lead capture is implemented. The final screen provides Like, Share, Download, Talk to a Geojit expert and Invest via FLIP. Expert assistance offers official phone, branch locator and WhatsApp support; FLIP opens its verified login URL without transmitting an order. There is no backend.
 
 ## Analytics and privacy
 
 Events dispatch locally as `wealthbox:analytics` CustomEvents. No remote analytics library is loaded. An integrator may set `window.wealthBoxAnalyticsConsent=true` and initialize `window.dataLayer=[]` after obtaining appropriate consent. Events contain action names, company IDs, quantities/capacity and theme, never greeting text or client details. Provider integrations and consent UI remain out of scope.
 
-Drafts are stored only on the visitor's browser. Storage failures are announced. A completed or reviewing session resumes at the invitation with its selections preserved.
+Drafts are stored only on the visitor's browser. Storage failures are announced. Valid stage hashes restore the saved journey; an empty basket cannot enter review or completion. Browser back/forward navigation preserves the draft. Likes persist on the current device only.
 
 ## Publication
 
-Review branch: `feature/diwali-wealth-box-experience`. Do not merge to main or publish without the user's approval. The GitHub repository itself is public; this branch is source review, not a deployed campaign.
+The public app is deployed at https://sajankjose.github.io/diwaligiftbox/. Current source changes are synchronized to main and the GitHub Pages publishing branch `feature/diwali-wealth-box-prototype`. See VALIDATION.md for executed checks and remaining launch limitations.

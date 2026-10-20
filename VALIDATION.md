@@ -2,22 +2,22 @@
 
 ## Executed
 
-- 11 Node domain tests passed: exact price multiplication, duplicate company quantities, six-to-nine expansion, removal, invalid input sanitation, unavailable prices, sector and concentration calculation, five-stage transitions, default name privacy, deterministic dismissible guidance, and feed invalidation.
-- JavaScript syntax check passed for application code.
-- Static build generated with no dependency installation.
-- The shared image renderer was executed using the installed native canvas runtime. Both default and eight-stock cards produced 1080×1350 PNGs. The eight-stock card with a long greeting was visually inspected: text and names fit without overlap.
-- The standalone HTML's bundled script was syntax checked.
+- All 11 Node domain tests passed: exact paise multiplication, duplicate quantities, expansion, removal, restore sanitation, missing prices, composition, stage transitions, name privacy, guidance and feed invalidation.
+- Application JavaScript syntax and static build passed.
+- A JSDOM interaction check passed against the built standalone app: complete journey, eight companies, full-tray expansion, direct quantity entry, invalid input rejection, remove/undo, mobile tray actions, review, reveal, final CTAs, persistent local Like, official expert contact and retained edits. Dialog and reduced-motion APIs were stubbed. This does not test CSS layout or native browser functionality.
+- Shared image renderer previously generated default and eight-stock 1080×1350 cards with the actual Geojit logo. A long greeting with all names was visually inspected for overlap.
+- Geojit logo and Radio Canada Big fonts are local assets. Colour and typography tokens match the supplied Figma system.
 
-## Not executed / limitations
+## Responsive and interaction changes
 
-Browser control was unavailable in this managed workspace. No browser preview server or alternate browser automation was used. End-to-end clicks, layout screenshots, device breakpoints, real PNG browser downloads, native share sheets, drag/drop, keyboard/focus behaviour and reduced-motion behaviour are implemented but **not browser verified**. No claim of WCAG conformance or production compliance approval is made.
+Consolidated stylesheet; desktop tray scrolls within the viewport; mobile/tablet tray uses a dialog and safe-area-aware summary; cards stack at narrow widths; long monetary values wrap; quantities can be entered directly. Added selected-company filtering, result counts, focus/scroll preservation, browser history, cancellable reveal timers and async gift-image readiness. Share uses a prepared image to retain browser user activation. Like persists only on the current device; no global count is implied.
 
-Before approval, check the standalone preview at 360/390/768/1440px, mobile landscape, keyboard only and reduced motion. Add all eight companies; increment quantities; remove/undo; switch themes and search; review by stock and sector; wrap/skip/reveal; edit after completion; refresh and recover draft. Export with names unchecked/checked, a long greeting and all eight names; try native sharing on a supported phone and fallback on desktop. Check browser console errors, focus restoration and any sticky control overlap.
+## Browser verification
 
-Figma system and official logo assets were unavailable; exact Geojit branding requires review. Market prices and research remain explicitly illustrative/pending. Live price integration, official disclosures and research, analytics consent wiring and service routing must be approved before launch.
+TinyFish completed live QA for deployed commit cffe2d4880b811bedda04bb9630a64f3ef70dabd in 74 steps (309 seconds), run 2ef9dac3-5e73-438d-b50f-1ad5e5107bc5. It reported no blocking defects and confirmed adding all eight companies, expansion, increments, remove/undo, review, wrap/unwrap/skip, greeting edits, opt-in names, visible Geojit logo on the card, Like toggling, download initiation via Blob URL, share fallback, expert dialog/close and FLIP target. No messages or orders were sent.
 
-## Brand and CTA revision
+The run reported an approximate desktop viewport of 1920×1360 and no visible clipping or overflow. Exact viewport resizing was unsupported. Its mobile/tablet descriptions did not establish reproducible dimensions, so they are NOT counted as verified breakpoint tests. Explicit 320×700, 390×844 and 768×1024 layout checks remain outstanding, including fixed mobile-summary overlap. Native mobile share sheets and downloaded-file inspection were not verified by this run. No screenshot artifacts were returned.
 
-The earlier Figma/logo limitations are resolved: the real logo and exact colour/type tokens have now been obtained. Radio Canada Big is bundled locally. Header, footer, gift card, pill buttons and final actions have been revised. Missing temporary sample icons were discarded; there are no broken asset URLs in the build.
+## Launch scope
 
-The four final actions are explicit: Share my gift, Download gift card, Talk to a Geojit expert, Invest via FLIP. The expert dialog links to verified contact options. Export awaits the actual logo and font load. Device/browser QA remains pending because supported browser control is still unavailable.
+This is a public interactive campaign app. Prices and company descriptions remain clearly illustrative. It does not place investment orders or transfer shares. Geojit-approved research, current prices and required campaign disclosures must be supplied before using it as an investment recommendation campaign. No WCAG or compliance certification is claimed. Native share-sheet completion remains device-dependent.
