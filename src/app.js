@@ -2,7 +2,7 @@ import {svgIcon,FESTIVE_ART} from './icons.js';
 import {BRAND_LOGO,LINKS} from "./brand.js";
 import {CONFIG,STOCKS,THEMES} from './catalogue.js';
 import {fresh,restore,selected,calculate,quantity,expand,transition,guidance,giftNames} from './model.js';
-import {paintGift,canvasBlob} from './gift-card.js';
+import {paintGift,canvasBlob} from './gift-card.js?v=diwali-festival-1';
 const $=s=>document.querySelector(s),main=$('#main'),modal=$('#modal');
 const logoImage=new Image();const logoReady=new Promise((resolve,reject)=>{logoImage.onload=resolve;logoImage.onerror=()=>reject(Error('Geojit logo could not load'));});logoImage.src=BRAND_LOGO;
 const festiveImage=new Image();const festiveReady=new Promise(resolve=>{festiveImage.onload=()=>resolve(true);festiveImage.onerror=()=>resolve(false)});festiveImage.src=FESTIVE_ART;
