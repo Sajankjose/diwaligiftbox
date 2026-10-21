@@ -30,3 +30,12 @@ This is a public interactive campaign app. Prices and company descriptions remai
 - TinyFish run b280a324-db1b-433f-8ec6-b002cc40f766 completed in 42 steps. It reported the new artwork and pictograms visible, opening transition playing, final floating bar visible while scrolling, expert dialog above the bar with working close, and download enabled after preparation. No visible blocking overlap was reported.
 - Exact viewport dimensions, 320/390px resizing and iframe checks were unavailable. No screenshot artifact was returned; the returned artwork URL is not a UI screenshot. Tool descriptions of a fish animation reflect its cursor and are not part of the app; the actual app has golden particles and a two-frame photographic transition. Browser console coverage is not claimed.
 - A subsequent cache-version change ensures returning visitors fetch the updated stylesheet, app and gift-card renderer; no visual or functional logic changed in that cache-version revision.
+
+## Guided portfolio and Smartfolios revision — 21 October 2026
+
+- All 17 Node tests passed, including allocation budgets, original-basket comparison, shared snapshot privacy/validation and revised stage transitions. Syntax and static build passed.
+- Native browser checks on the managed preview verified both entry routes, ₹25,000 allocation (₹20,075.17 invested, ₹4,924.83 unallocated), unwrap before editing, quantity edits, original-basket restoration, review and completion. DIY completed without a second unwrap.
+- Verified the floating Muhurat action and dialog, session information, official Smartfolios target and explicit no-transfer/no-order language. No order or external message was submitted.
+- Verified names-only sharing by default, opt-in quantities/values and recipient rendering of the actual shared snapshot.
+- Desktop screenshot inspected: portfolio summary, branded festive canvas and floating actions visible. Exact mobile viewport testing remains outstanding as stated above.
+- Prices and allocation remain illustrative pending approved inputs. The Smartfolios handoff does not submit pre-orders or automatically transfer holdings.

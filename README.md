@@ -1,6 +1,6 @@
 # Geojit Diwali Wealth Box
 
-Five-stage, dependency-free interactive campaign prototype, evolved from `feature/diwali-wealth-box-prototype` (5cc71cf). The previous add/search/theme/quantity/review/export behaviour is retained and extended.
+Dependency-free interactive campaign app, evolved from `feature/diwali-wealth-box-prototype` (5cc71cf). The previous add/search/theme/quantity/review/export behaviour is retained and extended.
 
 ## Run and build
 
@@ -16,14 +16,15 @@ Visit http://localhost:8080. Alternatively, build and open `dist/wealth-box-prev
 
 ## Experience
 
-- Invitation → building → reviewing → revealing → completed, with editing back to the studio.
+- Two routes: amount → suggested starting basket → unwrap → edit → review → complete; or DIY → build → review → complete.
+- Suggested baskets can be edited, restored or recalculated for another amount. The transparent illustrative allocator buys one share of every company, then divides remaining budget equally for additional whole shares. Minimum budget is ₹9,876; unused cash is shown. This is not an approved weighted recommendation.
 - Eight retained prototype companies; six compartments, expanding in threes, up to a configurable maximum of 30.
 - Whole-share quantities, zero removes, undo, drag-and-drop and tap alternatives.
 - Search, six themes, deterministic dismissible guidance and versioned local draft persistence (migration from v1).
 - Review by company or sector, concentration and indicative total in integer paise calculations.
 - Mobile persistent summary opens a native modal tray. Native dialogs provide focus containment and Escape support.
 - 1080×1350 greeting preview and PNG export use the same canvas renderer. Names are opt-in. Values and quantities are never rendered.
-- Native file sharing when supported; a clear download-and-attach fallback for WhatsApp. No automatic messages or orders.
+- Shareable portfolio snapshot links: stock names by default, quantities and indicative values only with explicit opt-in. Recipients can create an independent editable copy. Links are user-editable snapshots, not verified research. CSV portfolio download and PNG greeting export are separate. No automatic messages or orders.
 - Reduced motion, skip options, visible keyboard focus, quantity announcements and no audio playback.
 
 ## Files and component boundaries
@@ -31,10 +32,11 @@ Visit http://localhost:8080. Alternatively, build and open `dist/wealth-box-prev
 - `src/catalogue.js`: stock catalogue, themes, capacity and guidance thresholds.
 - `src/model.js`: calculations, state transitions, persistence sanitation, guidance rules, price adapter.
 - `src/app.js`: invitation, studio, cards, tray, quantities, review, reveal, composer, dialogs and interaction events.
+- `src/journey.js`: suggested allocation, shared snapshot validation and Muhurat session configuration.
 - `src/gift-card.js`: shared canvas image renderer and Blob conversion.
 - `style.css`: responsive campaign styling and motion.
 - `build.mjs`: static output and a self-contained preview.
-- `tests/model.test.js`: domain regression tests.
+- `tests/model.test.js` and `tests/journey.test.js`: domain and journey regression tests.
 - `VALIDATION.md`: evidence and outstanding checks.
 
 ## Data and release requirements
@@ -43,9 +45,9 @@ All eight prices, including Motherson ₹158.15, are retained **illustrative pro
 
 `refreshPrices(adapter)` accepts `{id,price}` entries; missing or invalid quotes become unavailable and suppress a definitive total. A production feed must provide authentication, source/as-of timestamps, stale-data policy and consent/security review. After feed updates, dispatch `wealthbox:prices-updated` for re-rendering. There is no connected live feed or periodic refresh in this demo.
 
-The Geojit design-system file was successfully inspected on 20 October 2026. The UI now uses Radio Canada Big (bundled 400/500/600/700), primary #09877B, pressed #036057, text #022F2D/#4A6361, light-yellow #FAFAED and card border #C9E2E0. Primary and secondary actions use the 56px/48px pill button geometry. See BRAND-SOURCES.md. Burgundy, gold and cream remain decorative campaign colours. The actual uploaded white Geojit logo is embedded without recolouring in the header, footer and gift-card export. The box and diyas are local CSS/canvas artwork.
+The Geojit design-system file was successfully inspected on 20 October 2026. The UI now uses Radio Canada Big (bundled 400/500/600/700), primary #09877B, pressed #036057, text #022F2D/#4A6361, light-yellow #FAFAED and card border #C9E2E0. Primary and secondary actions use the 56px/48px pill button geometry. See BRAND-SOURCES.md. Burgundy, gold and cream remain decorative campaign colours. The actual uploaded white Geojit logo is embedded without recolouring in the header, footer and gift-card export. The realistic gift artwork is a bundled WebP with an opening transition.
 
-No suitability assessment, brokerage calculation, transaction submission, client lookup or consent-based lead capture is implemented. The final screen provides Like, Share, Download, Talk to a Geojit expert and Invest via FLIP. Expert assistance offers official phone, branch locator and WhatsApp support; FLIP opens its verified login URL without transmitting an order. There is no backend.
+No suitability assessment, brokerage calculation, transaction submission, client lookup or consent-based lead capture is implemented. The final screen provides Like, Share, Download, Talk to a Geojit expert and Muhurat pre-order preparation. Expert assistance offers official contact channels. Smartfolios opens its official URL without transferring the basket or submitting an order. A supported basket-transfer API/deep link, edited-basket policy, cutoff and order-status callback are required before enabling genuine pre-orders. The UI shows 8 November 2026, 2:20–3:30 PM IST and asks visitors to confirm acceptance in Smartfolios. There is no backend.
 
 ## Analytics and privacy
 
