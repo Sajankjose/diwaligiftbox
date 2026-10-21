@@ -103,3 +103,33 @@ dialog{border:1px solid var(--line);border-radius:20px;padding:36px;width:min(56
   body[data-stage="building"] .studio-screen .stage-heading h1{visibility:hidden;position:relative}
   body[data-stage="building"] .studio-screen .stage-heading h1:after{content:"Your Wealth Box";visibility:visible;position:absolute;left:0;top:0;white-space:nowrap}
 }
+
+/* Single-action mobile navigation and progressive disclosure, Oct 2026 */
+@media(max-width:767px){
+  body[data-stage="building"] .studio-screen .steps>div:not(.active){display:none}
+  body[data-stage="building"] .studio-screen .filter-row label{display:none}
+  body[data-stage="building"] .studio-screen .stock-count{font-size:11px;line-height:1.4}
+  body[data-stage="building"] .studio-screen .stock .sector{font-size:12px}
+  body[data-stage="building"] .studio-screen .mobile-gift-actions button{font-size:12px}
+  body[data-stage="building"] .studio-screen .explorer .stock .card-actions{gap:8px}
+  body[data-stage="building"] .studio-screen .mobile-summary{min-height:0;max-height:76px;box-shadow:0 -3px 18px rgba(0,0,0,.12)}
+  body[data-stage="building"] .studio-screen .mobile-summary:focus-visible{outline-offset:-5px}
+  body[data-stage="building"] main{padding-bottom:88px}
+  body[data-stage="reviewing"] main{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  .mobile-action-dock{display:none}
+  body[data-stage="reviewing"] .mobile-action-dock{display:block;position:fixed;bottom:0;left:0;right:0;z-index:30;padding:9px 16px calc(9px + env(safe-area-inset-bottom));background:var(--dark);box-shadow:0 -4px 18px rgba(0,0,0,.16)}
+  .mobile-action-dock .primary{width:100%;min-height:48px;padding:10px 18px}
+  body[data-stage="reviewing"] .review-grid .actions .primary{display:none}
+  body[data-stage="reviewing"] .stage-shell>.eyebrow{display:none}
+  body[data-stage="reviewing"] .stage-shell>h1{font-size:29px;margin:8px 0 18px}
+  body[data-stage="reviewing"] .review-grid section>p.muted.small:first-child{display:none}
+  body[data-stage="completed"] .portfolio-summary{display:none}
+  body[data-stage="completed"] .final-dock{display:flex;flex-direction:column;padding:9px 14px calc(9px + env(safe-area-inset-bottom));gap:0;min-height:0;max-height:90px;box-shadow:0 -4px 18px rgba(0,0,0,.16)}
+  body[data-stage="completed"] .final-dock .dock-sharing,body[data-stage="completed"] .final-dock .dock-copy{display:none}
+  body[data-stage="completed"] .final-dock .dock-next{width:100%;display:block}
+  body[data-stage="completed"] .final-dock .dock-next .primary{display:none}
+  body[data-stage="completed"] .final-dock .dock-next .secondary{display:flex;width:100%;max-width:none;min-height:48px;font-weight:700;border-radius:999px;background:#e9c788;color:#092f2c;border-color:#e9c788}
+  body[data-stage="completed"] .completed{padding-bottom:calc(95px + env(safe-area-inset-bottom))}
+}
+@media(min-width:768px){.mobile-action-dock{display:none}}
+@media(max-width:767px){dialog[open]~.mobile-action-dock,body:has(dialog[open]) .mobile-action-dock,body:has(dialog[open]) .mobile-summary,body:has(dialog[open]) .final-dock{visibility:hidden;pointer-events:none}}
