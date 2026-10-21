@@ -93,3 +93,13 @@ dialog{border:1px solid var(--line);border-radius:20px;padding:36px;width:min(56
   body[data-stage="building"] .mobile-summary:disabled{opacity:.6}
 }
 @media(max-width:370px){.mobile-gift .slot{height:63px;min-height:63px}.mobile-gift-values strong{font-size:16px}}
+
+@media(max-width:767px){
+  body[data-stage="building"] .header{height:62px;min-height:62px;padding-inline:15px;gap:10px}
+  body[data-stage="building"] .header .brand,body[data-stage="building"] .header .brand img{width:145px}
+  body[data-stage="building"] .header .text-button{font-size:12px}
+  body[data-stage="building"] .studio-screen .stage-heading h1{font-size:28px;line-height:1.15}
+  body[data-stage="building"] .studio-screen .stage-heading h1:before{display:none}
+  body[data-stage="building"] .studio-screen .stage-heading h1{visibility:hidden;position:relative}
+  body[data-stage="building"] .studio-screen .stage-heading h1:after{content:"Your Wealth Box";visibility:visible;position:absolute;left:0;top:0;white-space:nowrap}
+}
